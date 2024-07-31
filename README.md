@@ -71,7 +71,14 @@ Download the repository and start the docker with the APs, the clients and nzyme
 ``` bash
 git clone https://github.com/r4ulcl/WiFiChallengeLab-docker
 cd WiFiChallengeLab-docker
-docker compose up -d --file docker-compose.yml
+
+sudo apt install docker.io
+docker --version
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+docker-compose up -d  
 ```
 
 #### Optionally: Install Wi-Fi tools
