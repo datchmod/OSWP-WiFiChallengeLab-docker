@@ -57,13 +57,6 @@ The principal changes from version 1.0.5 to 2.0.3 are the following.
 
 ## Using WiFiChallenge Lab
 
-### Using the VM
-
-Download the VM for VMWare or VirtualBox:
-
-- [GitHub releases](https://github.com/r4ulcl/WiFiChallengeLab-docker/releases)
-- [Proton Drive](https://drive.proton.me/urls/Q4WPB23W7R#Qk4nxMH8Q4oQ)
-
 ### Docker inside a Linux host or a custom VM
 
 Download the repository and start the docker with the APs, the clients and nzyme for alerts. 
@@ -85,46 +78,6 @@ docker-compose up -d
 
 Go to the folder where the tools will be installed and execute `Attacker/installTools.sh`
 
-### Create your own VM using vagrant
-
-#### Requirements
-
-- A host with at least 4 CPU cores and 4 GB of RAM.
-- vagrant
-- VirtualBox, VMware or Hyper-V
-
-#### Create the VM with vagrant
-
-``` bash
-git clone https://github.com/r4ulcl/WiFiChallengeLab-docker
-cd WiFiChallengeLab-docker
-cd vagrant
-```
-
-Edit file vagrantfile memory and CPU to your needs. 
-
-``` bash
-nano vagrantfile
-```
-
-If you want a VMWare VM:
-
-``` bash
-vagrant up vmware_vm 
-```
-
-For a VirtualBox VM:
-``` bash
-vagrant up virtualbox_vm 
-```
-
-And for a Hyper-v VM, in a admin console:
-``` bash
-vagrant up hyper-v_vm --provider=hyperv
-```
-
-## Usage
-
 ### Attack from Ubuntu VM
 - The tools are installed and can be found in the tools folder of the root home. 
 - There are 7 antennas available, wlan0 to wlan6.
@@ -142,13 +95,3 @@ To modify the files you can download the repository and edit both APs and client
 
 ## Recompile Docker
 To recreate the Docker files with the changes made, modify the docker-compose.yml file by commenting out the "image:" line in each Docker and uncommenting the line with "build:". Then use "docker compose build" to create a new version.
-
-## Support this project
-
-### Buymeacoffee
-
-[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png">](https://www.buymeacoffee.com/r4ulcl)
- 
-## License
-
-[GNU General Public License v3.0](https://github.com/r4ulcl/WiFiChallengeLab-docker/blob/main/LICENSE)
