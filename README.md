@@ -74,10 +74,6 @@ docker-compose --version
 sudo docker-compose up -d  
 ```
 
-#### Optionally: Install Wi-Fi tools
-
-Go to the folder where the tools will be installed and execute `Attacker/installTools.sh`
-
 ### Attack from Ubuntu VM
 - The tools are installed and can be found in the tools folder of the root home. 
 - There are 7 antennas available, wlan0 to wlan6.
