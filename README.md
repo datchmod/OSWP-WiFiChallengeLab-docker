@@ -87,9 +87,6 @@ Go to the folder where the tools will be installed and execute `Attacker/install
 - Start the docker-compose.yml file and use the virtual WLAN. 
 - Use your own tools and configurations to attack. 
 
-### Attack from Docker Attacker
-- TODO
-
 ## Modify config files
 To modify the files you can download the repository and edit both APs and clients (in the VM the path is /var/WiFiChallenge). The files are divided by APs, Clients, and Nzyme files.
 
